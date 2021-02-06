@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-02-04T15:22:07.976+01:00" lastModified="2021-02-06T11:10:22.019+01:00" leaf="true" version="20">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>be.nabu.libs.types.api.KeyValuePair</references>
+    <references>nabu.utils.Date.now</references>
+    <references>nabu.web.events.specs.ipResolver</references>
+    <references>be.nabu.libs.authentication.api.Device</references>
+    <references>be.nabu.libs.authentication.api.Token</references>
+    <references>java.lang.Integer</references>
+    <references>nabu.web.events.configuration</references>
+    <references>nabu.web.events.types.webEvent</references>
+    <references>be.nabu.eai.module.web.websockets.api.WebSocketConnectionListener.connected</references>
+    <references>java.lang.Boolean</references>
+    <references>nabu.utils.Event.fire</references>
+    <references>java.lang.Object</references>
+    <references>java.lang.String</references>
+</node>

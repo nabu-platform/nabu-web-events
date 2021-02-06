@@ -1,0 +1,5 @@
+<structure interface="nabu.web.events.rest.session.start:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.web.events.types.webEvent" name="event"/>
+</structure>

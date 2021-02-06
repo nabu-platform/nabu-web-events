@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.web.websockets.WebSocketManager" created="2021-02-04T15:21:30.912+01:00" lastModified="2021-02-06T07:58:26.545+01:00" leaf="true" version="7">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.web.events.web.message</references>
+    <references>nabu.web.events.web.connect</references>
+    <references>nabu.web.events.web.disconnect</references>
+    <references>nabu.web.events.configuration</references>
+</node>

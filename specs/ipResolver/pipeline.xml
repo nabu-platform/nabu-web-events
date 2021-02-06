@@ -1,0 +1,18 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="ip" type="java.lang.String"/>
+    </structure>
+    <structure name="output">
+        <field minOccurs="0" name="longitude" type="java.lang.Double"/>
+        <field minOccurs="0" name="latitude" type="java.lang.Double"/>
+        <field minOccurs="0" name="city" type="java.lang.String"/>
+        <field minOccurs="0" name="postCode" type="java.lang.String"/>
+        <field foreignKey="nabu.cms.core.types.model.core.MasterDataEntry:id" minOccurs="0" name="country" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
+        <field foreignKey="nabu.cms.core.types.model.core.MasterDataEntry:id" minOccurs="0" name="region" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
+        <field foreignKey="nabu.cms.core.types.model.core.MasterDataEntry:id" minOccurs="0" name="continent" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
+        <field minOccurs="0" name="isp" type="java.lang.String"/>
+        <field foreignKey="nabu.cms.core.types.model.core.MasterDataEntry:id" minOccurs="0" name="currency" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
+        <field minOccurs="0" name="timezone" type="java.lang.String"/>
+        <field minOccurs="0" name="ipType" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
+    </structure>
+</structure>

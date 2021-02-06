@@ -1,0 +1,3 @@
+<structure name="heartbeat">
+    <field name="timestamp" timezone="UTC" type="java.util.Date"/>
+</structure>

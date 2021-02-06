@@ -1,0 +1,11 @@
+<structure interface="be.nabu.eai.module.web.websockets.api.WebSocketConnectionListener.message" name="pipeline">
+    <structure name="input">
+        <structure definition="nabu.web.events.types.heartbeat" minOccurs="0" name="heartbeat"/>
+        <field minOccurs="0" name="content" type="java.io.InputStream"/>
+    </structure>
+    <structure name="output"/>
+    <structure definition="nabu.web.events.types.webEvent" name="event"/>
+    <field minOccurs="0" name="sessionId" type="java.lang.String"/>
+    <structure definition="nabu.web.events.configuration" name="configuration"/>
+    <structure definition="nabu.web.events.types.webEventInput" maxOccurs="unbounded" minOccurs="0" name="events"/>
+</structure>

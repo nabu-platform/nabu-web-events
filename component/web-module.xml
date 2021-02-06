@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webModule>
+    <path>/t</path>
+    <configurationType>nabu.web.events.configuration</configurationType>
+    <webFragments>nabu.web.events.web.socket</webFragments>
+    <audience>CUSTOMER</audience>
+</webModule>

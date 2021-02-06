@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2021-02-03T20:24:24.173+01:00" lastModified="2021-02-06T10:20:09.198+01:00" leaf="true" version="11">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>be.nabu.utils.cep.api.HTTPComplexEvent</references>
+    <references>java.lang.String</references>
+    <references>nabu.cms.core.types.model.core.MasterDataEntry</references>
+    <references>java.lang.Boolean</references>
+</node>

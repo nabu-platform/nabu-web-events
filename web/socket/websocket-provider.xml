@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<websocketProvider>
+    <serverPath>/w/e/{id}</serverPath>
+    <messageService>nabu.web.events.web.message</messageService>
+    <connectService>nabu.web.events.web.connect</connectService>
+    <disconnectService>nabu.web.events.web.disconnect</disconnectService>
+    <configurationType>nabu.web.events.configuration</configurationType>
+</websocketProvider>
