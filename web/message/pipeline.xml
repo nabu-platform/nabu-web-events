@@ -8,4 +8,5 @@
     <field minOccurs="0" name="sessionId" type="java.lang.String"/>
     <structure definition="nabu.web.events.configuration" name="configuration"/>
     <structure definition="nabu.web.events.types.webEventInput" maxOccurs="unbounded" minOccurs="0" name="events"/>
+    <field minOccurs="0" name="now" type="java.util.Date"/>
 </structure>

@@ -19,6 +19,7 @@
         <field name="url" type="java.lang.String"/>
         <field name="referrer" type="java.lang.String"/>
         <field name="userAgent" type="java.lang.String"/>
+        <field minOccurs="0" name="timezone" type="java.lang.String"/>
     </structure>
     <structure minOccurs="0" name="location">
         <field minOccurs="0" name="latitude" type="java.lang.Double"/>

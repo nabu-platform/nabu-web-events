@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-02-04T15:22:02.448+01:00" lastModified="2021-02-06T11:09:57.435+01:00" leaf="true" version="37">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-02-04T15:22:02.448+01:00" lastModified="2021-04-21T09:38:16.463+02:00" leaf="true" version="40">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <properties/>
     <references>be.nabu.libs.types.api.KeyValuePair</references>
+    <references>java.util.Date</references>
+    <references>nabu.utils.Date.now</references>
     <references>nabu.web.events.specs.ipResolver</references>
     <references>nabu.web.events.types.heartbeat</references>
     <references>nabu.web.events.types.webEventInput</references>

@@ -20,4 +20,5 @@
     <field minOccurs="0" name="referrer" type="java.lang.String"/>
     <field identifiable="true" minOccurs="0" name="origin" type="java.lang.String"/>
     <field minOccurs="0" name="component" type="java.lang.String"/>
+    <field comment="The reported timestamp, we always want a server timestamp to know the fundamental truth" minOccurs="0" name="timestamp" type="java.util.Date"/>
 </structure>

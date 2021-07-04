@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.iface.ServiceInterfaceManager" created="2021-02-15T09:22:56.344+01:00" lastModified="2021-02-15T09:23:43.021+01:00" leaf="true" version="4">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.web.events.types.webEventInput</references>
+    <references>nabu.web.events.types.webEvent</references>
+    <references>nabu.web.events.types.webEvent</references>
+</node>

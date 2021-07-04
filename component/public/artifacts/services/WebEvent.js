@@ -4,30 +4,37 @@ window.addEventListener("load", function() {
 	var stopped = false;
 	var id = new Date().toISOString().replace(/[:.-]+/g, "");
 	var backlog = [];
+	var promise = new nabu.utils.promise();
+
+	if (!application.configuration.requestEnrichers) {
+		application.configuration.requestEnrichers = [];
+	}	
+	application.configuration.requestEnrichers.push(function(x) {
+		x.headers["Event-Session-Id"] = id;
+	});
+	
 	var start = function() {
 		var url = window.location.protocol == "https:" ? "wss" : "ws";
 		url += "://";
 		url += window.location.hostname;
-		console.log("protocol en port", window.location.protocol , window.location.port);
 		if ((window.location.protocol == "https:" && window.location.port != 443) || (window.location.protocol == "http:" && window.location.port != 80)) {
 			url += ":" + window.location.port;
 		}
 		url += "${server.root()}";
 		url += "t/w/e/" + id;
-		console.log("Connecting to: " + url);
 		socket = new WebSocket(url, "analysis");
 		socket.onopen = function(event) {
-			console.log("Connected to: " + url);
 			connected = true;
 			if (backlog.length > 0) {
 				backlog.splice(0).forEach(function(event) {
 					socket.send(JSON.stringify(event));
 				});
 			}
+			promise.resolve();
 		};
 		// if it is remotely closed, we will try again!
 		socket.onclose = function(event) {
-			console.log("Disconnected from: " + url);
+			console.log("closing!");
 			connected = false;
 			// don't reconnect if we actually stopped
 			if (!stopped) {
@@ -39,6 +46,7 @@ window.addEventListener("load", function() {
 			console.log("Received message", event.data);
 		};
 	};
+	
 	var heartbeat = function() {
 		if (connected) {
 			socket.send(JSON.stringify({
@@ -49,6 +57,7 @@ window.addEventListener("load", function() {
 	};
 	heartbeat();
 	nabu.page.provide("page-analysis", {
+		name: "webEvent",
 		start: start,
 		stop: function() {
 			stopped = true;
@@ -62,7 +71,7 @@ window.addEventListener("load", function() {
 					event = nabu.utils.objects.clone(event);
 					event.content = JSON.stringify(event.content);
 				}
-				console.log("sending: ", event);
+				//console.log("sending: ", event);
 				socket.send(JSON.stringify(event));
 			}
 			else {

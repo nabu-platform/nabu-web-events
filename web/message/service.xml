@@ -81,6 +81,27 @@
 				<from>input/pathValues[key = "id"]/value</from>
 				<to>sessionId</to>
 			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="b09b02a9-ae83-445b-90b6-909b0a2d3565"
+					serviceId="nabu.utils.Date.now"
+					resultName="resultc7c8cc10cc8a4bfd83b83d07fc4a3022"
+					temporaryMapping="true"
+					x="152"
+					y="222"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="7278b078-2b20-447b-9df8-67c346de9bf3"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>resultc7c8cc10cc8a4bfd83b83d07fc4a3022/date</from>
+				<to>now</to>
+			</steps>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.For"
 				disabled="false"
@@ -197,15 +218,6 @@
 						fixedValue="false">
 					<from>inputEvent/meta/language</from>
 					<to>event/language</to>
-				</steps>
-				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-						disabled="false"
-						id="40c69205-f174-4dd2-ac86-f8ef200e217a"
-						mask="false"
-						optional="false"
-						fixedValue="false">
-					<from>inputEvent/meta/created</from>
-					<to>event/created</to>
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
@@ -368,6 +380,33 @@
 						fixedValue="false">
 					<from>inputEvent/source</from>
 					<to>event/component</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="9877a3ac-a5ce-4647-bc8c-b5d61a6c2c2c"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>inputEvent/meta/timezone</from>
+					<to>event/timezone</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="c67ac73c-a4d7-49b1-acf6-ebbb65f8fe46"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>inputEvent/meta/created</from>
+					<to>event/timestamp</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="2e90e58f-e447-4c87-8ff7-739d574aaf21"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>now</from>
+					<to>event/created</to>
 				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"

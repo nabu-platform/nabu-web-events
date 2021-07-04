@@ -1,0 +1,8 @@
+<structure name="pipeline">
+    <structure name="input">
+        <structure definition="nabu.web.events.types.webEvent" name="disconnectEvent"/>
+    </structure>
+    <structure name="output">
+        <structure definition="nabu.web.events.types.webEvent" minOccurs="0" name="disconnectEvent"/>
+    </structure>
+</structure>

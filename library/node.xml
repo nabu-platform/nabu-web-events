@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.maven.MavenLibraryManager" created="2021-02-08T09:17:52.579+01:00" lastModified="2021-02-08T09:19:40.960+01:00" leaf="true" version="5">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+</node>
