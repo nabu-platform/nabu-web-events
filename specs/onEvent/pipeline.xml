@@ -1,4 +1,4 @@
-<structure name="pipeline">
+<structure comment="You can stop an event from firing by not returning it in the output. So make sure you do map it if you don't want it dropped.&#10;&#10;For example:&#10;&#10;On event can be used to enrich events, for example:&#10;&#10;- ip resolving for geolocation via ipstack&#10;- session recording where we push a number of events from the frontend, store it in a large blob and on disconnect, we fire a single event with the entire session in it" name="pipeline">
     <structure name="input">
         <structure definition="nabu.web.events.types.webEventInput" name="inputEvent"/>
         <structure definition="nabu.web.events.types.webEvent" name="outputEvent"/>
