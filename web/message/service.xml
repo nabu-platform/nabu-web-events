@@ -1,11 +1,13 @@
 <sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		disabled="false"
-		id="84320319-6fbb-41ca-9d07-faac08727f21">
+		id="84320319-6fbb-41ca-9d07-faac08727f21"
+		lineNumber="1">
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="We assume it's an event, it may contain a lot of unknown fields which will not work if we simply define it as an input"
 			disabled="false"
 			id="372b5b7c-a54a-4abf-b8c9-e12ce9a9b981"
-			label="input/content != null">
+			label="input/content != null"
+			lineNumber="2">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="152ef6f5-0faf-410b-ba3d-37bd9a94e4b5"
@@ -58,11 +60,13 @@
 	<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
 			disabled="false"
 			id="1c6c0cd7-2bf2-4a57-8fc5-554e69a8b3f9"
-			label="events">
+			label="events"
+			lineNumber="3">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 				comment="Get path id"
 				disabled="false"
-				id="0e49c922-71bf-46f1-b565-ed1408394b72">
+				id="0e49c922-71bf-46f1-b565-ed1408394b72"
+				lineNumber="4">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 					disabled="false"
 					id="8ea740f9-f416-4fad-9427-0b16fe3e27d7"
@@ -106,11 +110,13 @@
 		<steps xsi:type="be.nabu.libs.services.vm.step.For"
 				disabled="false"
 				id="d6bd9100-3e3c-4799-99f8-fb3e56a53cc4"
+				lineNumber="5"
 				variable="inputEvent">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					comment="Map event"
 					disabled="false"
-					id="ea5ff1c2-8a3f-4d26-b9ec-b65332315ac7">
+					id="ea5ff1c2-8a3f-4d26-b9ec-b65332315ac7"
+					lineNumber="6">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
 						id="a99a3473-1cbd-4409-ab9f-cdec4f752b13"
@@ -182,15 +188,6 @@
 						fixedValue="true">
 					<from>WEBSOCKET</from>
 					<to>event/applicationProtocol</to>
-				</steps>
-				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-						disabled="false"
-						id="83448135-99d1-4af9-a659-ec230a39c246"
-						mask="false"
-						optional="false"
-						fixedValue="true">
-					<from>=sessionId + "@" + input/ip</from>
-					<to>event/sessionId</to>
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
@@ -408,12 +405,22 @@
 					<from>now</from>
 					<to>event/created</to>
 				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="060aad7a32204a87983a676bfdaf5a9f"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>sessionId</from>
+					<to>event/sessionId</to>
+				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					comment="Resolve IP"
 					disabled="false"
 					id="812cdaef-3053-4119-9568-ce1e98e431e6"
-					label="event/sourceLatitude != null &amp;&amp; configuration/ipResolverId != null &amp;&amp; input/host != null">
+					label="event/sourceLatitude != null &amp;&amp; configuration/ipResolverId != null &amp;&amp; input/host != null"
+					lineNumber="7">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="b64de416-cb7f-4bde-8766-d2e8fe81f854"
@@ -547,7 +554,8 @@
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					comment="Fire the event"
 					disabled="false"
-					id="0e130693-1590-4b36-84c3-7c42781878c4">
+					id="0e130693-1590-4b36-84c3-7c42781878c4"
+					lineNumber="8">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="3c23c2a9-3339-4e90-8e86-6acb6a9c6c98"

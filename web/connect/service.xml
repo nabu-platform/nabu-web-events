@@ -1,10 +1,12 @@
 <sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		disabled="false"
-		id="b834d8f6-51d6-435d-bd71-8b9ce42872b3">
+		id="b834d8f6-51d6-435d-bd71-8b9ce42872b3"
+		lineNumber="1">
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="Get path id"
 			disabled="false"
-			id="0e49c922-71bf-46f1-b565-ed1408394b72">
+			id="0e49c922-71bf-46f1-b565-ed1408394b72"
+			lineNumber="2">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 				disabled="false"
 				id="8ea740f9-f416-4fad-9427-0b16fe3e27d7"
@@ -27,7 +29,8 @@
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="Map event"
 			disabled="false"
-			id="ea5ff1c2-8a3f-4d26-b9ec-b65332315ac7">
+			id="ea5ff1c2-8a3f-4d26-b9ec-b65332315ac7"
+			lineNumber="3">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="df7429ee-65dd-49c1-aa4e-7d9c144ff0a5"
@@ -168,15 +171,6 @@
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 				disabled="false"
-				id="83448135-99d1-4af9-a659-ec230a39c246"
-				mask="false"
-				optional="false"
-				fixedValue="true">
-			<from>=sessionId + "@" + input/ip</from>
-			<to>event/sessionId</to>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-				disabled="false"
 				id="6e96aa4d-37fa-40c1-b7ea-bed28867e4e3"
 				mask="false"
 				optional="false"
@@ -202,12 +196,22 @@
 			<from>web-session</from>
 			<to>event/origin</to>
 		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="98ba3b264175493ab26d0913e64941be"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>sessionId</from>
+			<to>event/sessionId</to>
+		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="Resolve IP"
 			disabled="false"
 			id="812cdaef-3053-4119-9568-ce1e98e431e6"
-			label="configuration/ipResolverId != null &amp;&amp; input/host != null">
+			label="configuration/ipResolverId != null &amp;&amp; input/host != null"
+			lineNumber="4">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="b64de416-cb7f-4bde-8766-d2e8fe81f854"
@@ -340,7 +344,8 @@
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
-			id="9924269c-bb21-4d8f-afb4-6e8bc85da004">
+			id="9924269c-bb21-4d8f-afb4-6e8bc85da004"
+			lineNumber="5">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="0a951f5f-8b4d-4332-90f5-b7fbffda3a8a"

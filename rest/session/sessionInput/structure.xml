@@ -1,4 +1,0 @@
-<structure name="input">
-    <field minOccurs="0" name="location" type="java.lang.String"/>
-    <field minOccurs="0" name="referer" type="java.lang.String"/>
-</structure>

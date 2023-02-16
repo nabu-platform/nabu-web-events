@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-02-04T15:22:12.248+01:00" lastModified="2021-02-06T11:10:11.945+01:00" leaf="true" version="12">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-02-04T15:22:12.248+01:00" lastModified="2023-01-29T08:59:00.039+01:00" leaf="true" version="13">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
+    <locked>false</locked>
     <properties/>
     <references>be.nabu.libs.types.api.KeyValuePair</references>
     <references>nabu.web.events.types.webEvent</references>

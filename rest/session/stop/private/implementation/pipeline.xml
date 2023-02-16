@@ -1,4 +1,0 @@
-<structure interface="nabu.web.events.rest.session.stop:api" name="pipeline">
-    <structure name="input"/>
-    <structure name="output"/>
-</structure>

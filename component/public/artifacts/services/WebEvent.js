@@ -2,7 +2,8 @@ window.addEventListener("load", function() {
 	var socket = null;
 	var connected = false;
 	var stopped = false;
-	var id = new Date().toISOString().replace(/[:.-]+/g, "");
+	//var id = new Date().toISOString().replace(/[:.-]+/g, "");
+	var id = crypto && crypto.randomUUID ? crypto.randomUUID() : new Date().toISOString().replace(/[:.-]+/g, "");
 	var backlog = [];
 	var promise = new nabu.utils.promise();
 
@@ -10,7 +11,7 @@ window.addEventListener("load", function() {
 		application.configuration.requestEnrichers = [];
 	}	
 	application.configuration.requestEnrichers.push(function(x) {
-		x.headers["Event-Session-Id"] = id;
+		x.headers["Session-Id"] = id;
 	});
 	
 	var start = function() {
