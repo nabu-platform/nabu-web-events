@@ -9,6 +9,7 @@
     <field comment="Additional content" minOccurs="0" name="content" type="java.lang.String"/>
     <field minOccurs="0" name="path" type="java.lang.String"/>
     <field minOccurs="0" name="source" type="java.lang.String"/>
+    <field minOccurs="0" name="data" type="java.lang.String"/>
     <structure name="meta">
         <field name="environment" type="java.lang.String"/>
         <field name="mobile" type="java.lang.Boolean"/>

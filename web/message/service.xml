@@ -414,6 +414,15 @@
 					<from>sessionId</from>
 					<to>event/sessionId</to>
 				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="ec1f55dccaff4aeab8ddb1094a590586"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>inputEvent/data</from>
+					<to>event/data</to>
+				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					comment="Resolve IP"

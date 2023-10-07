@@ -54,7 +54,7 @@ window.addEventListener("load", function() {
 				timestamp: new Date().toISOString()
 			}));
 		}
-		setTimeout(heartbeat, 2500);
+		setTimeout(heartbeat, 15000);
 	};
 	heartbeat();
 	nabu.page.provide("page-analysis", {
@@ -68,9 +68,12 @@ window.addEventListener("load", function() {
 		},
 		push: function(event) {
 			if (connected) {
+				event = nabu.utils.objects.clone(event);
 				if (event.content != null) {
-					event = nabu.utils.objects.clone(event);
 					event.content = JSON.stringify(event.content);
+				}
+				if (event.data != null) {
+					event.data = JSON.stringify(event.data, null, 2);
 				}
 				//console.log("sending: ", event);
 				socket.send(JSON.stringify(event));
