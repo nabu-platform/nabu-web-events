@@ -184,7 +184,7 @@
 				mask="false"
 				optional="false"
 				fixedValue="true">
-			<from>web-session</from>
+			<from>web</from>
 			<to>event/origin</to>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"

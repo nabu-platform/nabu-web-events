@@ -1,6 +1,7 @@
 <structure interface="be.nabu.eai.module.web.websockets.api.WebSocketConnectionListener.message" name="pipeline">
     <structure name="input">
         <structure definition="nabu.web.events.types.heartbeat" minOccurs="0" name="heartbeat"/>
+        <structure definition="nabu.web.events.types.authentication" minOccurs="0" name="authentication"/>
         <field minOccurs="0" name="content" type="java.io.InputStream"/>
     </structure>
     <structure name="output"/>
@@ -9,4 +10,6 @@
     <structure definition="nabu.web.events.configuration" name="configuration"/>
     <structure definition="nabu.web.events.types.webEventInput" maxOccurs="unbounded" minOccurs="0" name="events"/>
     <field minOccurs="0" name="now" type="java.util.Date"/>
+    <structure definition="be.nabu.eai.module.web.application.api.TemporaryAuthentication" minOccurs="0" name="authentication"/>
+    <structure definition="be.nabu.libs.authentication.api.Token" minOccurs="0" name="token"/>
 </structure>

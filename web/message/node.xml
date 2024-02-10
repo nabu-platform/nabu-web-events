@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-02-04T15:22:02.448+01:00" lastModified="2023-10-07T15:50:09.546+02:00" leaf="true" version="44">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-02-04T15:22:02.448+01:00" lastModified="2023-12-22T13:17:50.914+01:00" leaf="true" version="65">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
@@ -11,14 +11,20 @@
     <references>nabu.web.events.types.heartbeat</references>
     <references>nabu.web.events.types.webEventInput</references>
     <references>be.nabu.libs.authentication.api.Device</references>
+    <references>nabu.web.events.types.authentication</references>
     <references>be.nabu.libs.authentication.api.Token</references>
     <references>java.lang.Integer</references>
     <references>nabu.web.events.configuration</references>
     <references>nabu.web.events.types.webEvent</references>
+    <references>nabu.utils.Runtime.setServiceContext</references>
+    <references>be.nabu.eai.module.web.application.api.TemporaryAuthentication</references>
+    <references>nabu.protocols.websockets.provider.Services.authenticate</references>
     <references>nabu.utils.Event.fire</references>
     <references>java.lang.Object</references>
     <references>java.lang.String</references>
     <references>be.nabu.eai.module.web.websockets.api.WebSocketConnectionListener.message</references>
     <references>nabu.data.json.Services.unmarshal</references>
+    <references>nabu.utils.String.split</references>
+    <references>nabu.web.application.Services.temporarilyAuthenticate</references>
     <references>java.io.InputStream</references>
 </node>

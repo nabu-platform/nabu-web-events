@@ -24,6 +24,8 @@ window.addEventListener("load", function() {
 		url += "${server.root()}";
 		url += "t/w/e/" + id;
 		socket = new WebSocket(url, "analysis");
+		// set authenticated to false to start with
+		socket.authenticatedBearer = null;
 		socket.onopen = function(event) {
 			connected = true;
 			if (backlog.length > 0) {
@@ -57,6 +59,24 @@ window.addEventListener("load", function() {
 		setTimeout(heartbeat, 15000);
 	};
 	heartbeat();
+	
+	var authenticate = function() {
+		// get the current bearer
+		var bearer = application && application.services && application.services.user ? application.services.user.bearer : null;
+		// if we have a bearer and we have not sent it yet or it differs from the one we sent, resend it
+		if (bearer && socket && connected && socket.authenticatedBearer != bearer) {
+			socket.authenticatedBearer = bearer;
+			socket.send(JSON.stringify({
+				token: bearer
+			}));
+		}
+		else if (!bearer && socket.authenticatedBearer) {
+			socket.authenticatedBearer = null;
+			// close without stopping, it will reopen with a clean slate
+			socket.close();
+		}
+	}
+	
 	nabu.page.provide("page-analysis", {
 		name: "webEvent",
 		start: start,
@@ -67,6 +87,8 @@ window.addEventListener("load", function() {
 			}
 		},
 		push: function(event) {
+			console.log("event is", event);
+			authenticate();
 			if (connected) {
 				event = nabu.utils.objects.clone(event);
 				if (event.content != null) {

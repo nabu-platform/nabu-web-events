@@ -2,23 +2,20 @@
     <field name="sessionId" type="java.lang.String"/>
     <field minOccurs="0" name="city" type="java.lang.String"/>
     <field minOccurs="0" name="postCode" type="java.lang.String"/>
-    <field foreignKey="nabu.cms.core.types.model.core.MasterDataEntry:id" minOccurs="0" name="country" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
-    <field foreignKey="nabu.cms.core.types.model.core.MasterDataEntry:id" minOccurs="0" name="region" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
-    <field foreignKey="nabu.cms.core.types.model.core.MasterDataEntry:id" minOccurs="0" name="continent" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
+    <field minOccurs="0" name="country" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
+    <field minOccurs="0" name="region" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
+    <field minOccurs="0" name="continent" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
     <field minOccurs="0" name="isp" type="java.lang.String"/>
-    <field foreignKey="nabu.cms.core.types.model.core.MasterDataEntry:id" minOccurs="0" name="currency" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
+    <field minOccurs="0" name="currency" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
     <field minOccurs="0" name="ipType" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.lang.String"/>
-    <field minOccurs="0" name="pageCategory" type="java.lang.String"/>
-    <field minOccurs="0" name="pageName" type="java.lang.String"/>
-    <field name="eventTopCategory" type="java.lang.String"/>
-    <field minOccurs="0" name="eventGroup" type="java.lang.String"/>
     <field minOccurs="0" name="content" type="java.lang.String"/>
     <field minOccurs="0" name="environment" type="java.lang.String"/>
     <field minOccurs="0" name="mobile" type="java.lang.Boolean"/>
-    <field minOccurs="0" name="platform" type="java.lang.String"/>
-    <field minOccurs="0" name="application" type="java.lang.String"/>
     <field minOccurs="0" name="referrer" type="java.lang.String"/>
     <field identifiable="true" minOccurs="0" name="origin" type="java.lang.String"/>
     <field minOccurs="0" name="component" type="java.lang.String"/>
     <field comment="The reported timestamp, we always want a server timestamp to know the fundamental truth" minOccurs="0" name="timestamp" type="java.util.Date"/>
+    <field minOccurs="0" name="browserLanguage" type="java.lang.String"/>
+    <field minOccurs="0" name="locale" type="java.lang.String"/>
+    <field minOccurs="0" name="contextId" type="java.lang.String"/>
 </structure>

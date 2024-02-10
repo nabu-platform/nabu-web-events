@@ -1,26 +1,23 @@
 <structure name="webEventInput">
     <field name="eventId" type="java.lang.Long"/>
-    <field minOccurs="0" name="pageCategory" type="java.lang.String"/>
-    <field minOccurs="0" name="pageName" type="java.lang.String"/>
+    <field comment="The component in the frontend that this is from. For page builder this results in the page name." minOccurs="0" name="component" type="java.lang.String"/>
     <field name="event" type="java.lang.String"/>
-    <field name="type" type="java.lang.String"/>
     <field name="category" type="java.lang.String"/>
-    <field minOccurs="0" name="group" type="java.lang.String"/>
     <field comment="Additional content" minOccurs="0" name="content" type="java.lang.String"/>
-    <field minOccurs="0" name="path" type="java.lang.String"/>
-    <field minOccurs="0" name="source" type="java.lang.String"/>
+    <field minOccurs="0" name="page" type="java.lang.String"/>
+    <field minOccurs="0" name="context" type="java.lang.String"/>
     <field minOccurs="0" name="data" type="java.lang.String"/>
-    <structure name="meta">
-        <field name="environment" type="java.lang.String"/>
-        <field name="mobile" type="java.lang.Boolean"/>
-        <field name="platform" type="java.lang.String"/>
-        <field name="application" type="java.lang.String"/>
-        <field name="language" type="java.lang.String"/>
-        <field name="created" timezone="UTC" type="java.util.Date"/>
-        <field name="url" type="java.lang.String"/>
-        <field name="referrer" type="java.lang.String"/>
-        <field name="userAgent" type="java.lang.String"/>
+    <field minOccurs="0" name="code" type="java.lang.String"/>
+    <structure minOccurs="0" name="meta">
+        <field minOccurs="0" name="created" timezone="UTC" type="java.util.Date"/>
+        <field minOccurs="0" name="mobile" type="java.lang.Boolean"/>
+        <field minOccurs="0" name="userLanguage" type="java.lang.String"/>
+        <field name="browserLanguage" type="java.lang.String"/>
+        <field minOccurs="0" name="url" type="java.lang.String"/>
+        <field minOccurs="0" name="referrer" type="java.lang.String"/>
+        <field minOccurs="0" name="userAgent" type="java.lang.String"/>
         <field minOccurs="0" name="timezone" type="java.lang.String"/>
+        <field minOccurs="0" name="locale" type="java.lang.String"/>
     </structure>
     <structure minOccurs="0" name="location">
         <field minOccurs="0" name="latitude" type="java.lang.Double"/>
